@@ -22,3 +22,5 @@ vim.opt.list = true
 vim.opt.cursorline = true
 vim.opt.scrolloff = 10
 vim.opt.wrap = true
+vim.opt.linebreak = true
+vim.opt.textwidth = 80

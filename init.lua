@@ -40,6 +40,7 @@ vim.opt.scrolloff = 10
 vim.opt.wrap = true
 vim.opt.linebreak = true
 vim.opt.winborder = "rounded"
+vim.opt.laststatus = 0
 
 -- ========================================================================================
 -- API

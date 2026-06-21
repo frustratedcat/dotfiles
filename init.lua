@@ -11,6 +11,7 @@
 -- AUTOTAG
 -- MINI
 -- NONECKPAIN
+-- RENDER-MARKDOWN
 
 -- ========================================================================================
 -- OPTIONS
@@ -120,6 +121,7 @@ vim.pack.add({
 	{ src = "https://github.com/nvim-mini/mini.pick" },
 	{ src = "https://github.com/shortcuts/no-neck-pain.nvim" },
 	{ src = "https://github.com/nvim-mini/mini.files" },
+	{ src = "https://github.com/MeanderingProgrammer/render-markdown.nvim" },
 })
 
 -- ========================================================================================
@@ -133,7 +135,7 @@ vim.cmd("colorscheme catppuccin-macchiato")
 -- MASON
 require("mason").setup()
 require("mason-lspconfig").setup({
-	ensure_installed = { "lua_ls", "pyright", "html", "cssls", "gopls", "ruff" },
+	ensure_installed = { "lua_ls", "pyright", "html", "cssls", "gopls", "ruff", "marksman" },
 })
 -- lua_ls stuff so I don't get the warnings for "vim" as a global
 local lua_cfg = vim.lsp.config.lua_ls
@@ -155,6 +157,7 @@ vim.lsp.enable("html")
 vim.lsp.enable("cssls")
 vim.lsp.enable("gopls")
 vim.lsp.enable("ruff")
+vim.lsp.enable("marksman")
 
 -- ========================================================================================
 -- AUTOPAIRS
@@ -249,3 +252,8 @@ require("no-neck-pain").setup({
 		},
 	},
 })
+
+-- ========================================================================================
+-- RENDER-MARKDOWN
+-- ========================================================================================
+require("render-markdown").setup({})
